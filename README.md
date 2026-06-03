@@ -9,7 +9,7 @@ Em cenários de ERPs de grande volume rodando sobre o SQL Server Express, a estr
 
 Como o SQL Server Express **não possui o serviço SQL Server Agent**, a automação de rotinas de manutenção torna-se um desafio técnico.
 
-## 💡 Caminho para solução
+##  Caminho para solução
 Este projeto implementa uma política de backup robusta com **RPO de 5 minutos**, garantindo que, em caso de falha catastrófica, a perda máxima de dados seja de apenas 5 minutos de operação.
 
 A solução consiste em:
