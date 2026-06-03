@@ -1,7 +1,7 @@
 USE master;
 GO
 
-DECLARE @DBName VARCHAR(100) = 'Nome_Do_Seu_ERP'; -- Altere para o nome do banco do seu ERP
+DECLARE @DBName VARCHAR(100) = 'minha_base_sqlserverexpress'; -- Altere para o nome do banco do seu ERP
 DECLARE @FileName VARCHAR(255);
 DECLARE @DataHora VARCHAR(50);
 
@@ -10,6 +10,6 @@ SET @DataHora = REPLACE(REPLACE(REPLACE(CONVERT(VARCHAR, GETDATE(), 120), '-', '
 SET @FileName = 'C:\SQL_Backups\Log\LOG_' + @DBName + '_' + @DataHora + '.trn';
 
 -- Executa o backup do Log de transações com compactação
-BACKUP LOG [Nome_Do_Seu_ERP] 
+BACKUP LOG [minha_base_sqlserverexpress] 
 TO DISK = @FileName WITH COMPRESSION, STATS = 10;
 GO
